@@ -56,11 +56,11 @@ export const metadata: Metadata = {
 	],
 	authors: [
 		{
-			name: 'panduananto',
-			url: 'https://github.com/panduananto',
+			name: 'cerind0dev',
+			url: 'https://github.com/cerind0dev',
 		},
 	],
-	creator: 'panduananto',
+	creator: 'cerind0dev',
 	openGraph: {
 		type: 'website',
 		locale: 'in_ID',
@@ -88,4 +88,3 @@ export default async function RootLayout({ children }: RootLayoutProps) {
 		</html>
 	)
 }
-

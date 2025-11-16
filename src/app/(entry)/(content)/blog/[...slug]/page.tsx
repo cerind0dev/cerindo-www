@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: PostPageProps): Promise<Metad
 		metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
 		title: post.title,
 		description: post.description,
-		authors: post.authors,
+		// authors: post.authors,
 		openGraph: {
 			title: post.title,
 			description: post.description,
