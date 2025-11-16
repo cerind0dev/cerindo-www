@@ -1,5 +1,7 @@
 import { ImageResponse } from 'next/og'
 
+import { env } from '@/env'
+
 import { cn } from '@/lib/utils'
 import { ogImageSchema } from '@/lib/validations/og'
 
@@ -8,15 +10,16 @@ import type { NextRequest } from 'next/server'
 export const runtime = 'edge'
 
 export async function GET(req: NextRequest) {
+	const url = new URL(req.url)
+
 	try {
-		const rubikBold = await fetch(new URL('../../../assets/fonts/Rubik-Bold.ttf', import.meta.url)).then((result) =>
+		const rubikBold = await fetch(new URL('/fonts/Rubik-Bold.ttf', env.NEXT_PUBLIC_APP_URL)).then((result) =>
 			result.arrayBuffer(),
 		)
-		const interSemiBold = await fetch(new URL('../../../assets/fonts/Inter_18pt-SemiBold.ttf', import.meta.url)).then(
-			(res) => res.arrayBuffer(),
+		const interSemiBold = await fetch(new URL('/fonts/Inter_18pt-SemiBold.ttf', env.NEXT_PUBLIC_APP_URL)).then((res) =>
+			res.arrayBuffer(),
 		)
 
-		const url = new URL(req.url)
 		const parsedValues = ogImageSchema.parse(Object.fromEntries(url.searchParams))
 
 		const { mode, title, description, type } = parsedValues
@@ -43,7 +46,7 @@ export async function GET(req: NextRequest) {
 								mode === 'dark' ? 'text-zinc-100' : 'text-zinc-800',
 							)}
 							style={{
-								fontFamily: 'CalSans',
+								fontFamily: 'Rubik-Bold',
 							}}
 						>
 							{title}
@@ -69,7 +72,7 @@ export async function GET(req: NextRequest) {
 				height: 630,
 				fonts: [
 					{
-						name: 'CalSans',
+						name: 'Rubik-Bold',
 						data: rubikBold,
 						style: 'normal',
 					},
