@@ -84,7 +84,7 @@ const CompanyProjectCarousel = ({ projects, className, ...props }: CompanyProjec
 	)
 }
 
-interface CompanyProjectCarouselSkeletonProps extends React.ComponentPropsWithoutRef<typeof Card> {}
+type CompanyProjectCarouselSkeletonProps = React.ComponentPropsWithoutRef<typeof Card>
 
 export function CompanyProjectCarouselSkeleton({ className, ...props }: CompanyProjectCarouselSkeletonProps) {
 	return (

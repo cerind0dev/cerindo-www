@@ -27,7 +27,7 @@ export default async function FrequentlyAskedQuestionsPage() {
 						<PageHeaderDescription>Here are some helpful information for our customers</PageHeaderDescription>
 					</PageHeader>
 					<section className="mt-8">
-						{frequentlyAskedQuestions.map((faq, index) => {
+						{frequentlyAskedQuestions.map((faq) => {
 							return (
 								<Accordion
 									key={`${faq.question.split(' ').join('-')}`}

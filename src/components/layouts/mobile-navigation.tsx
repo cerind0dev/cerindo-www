@@ -55,7 +55,7 @@ const MobileNavigation = ({ items, className }: MobileNavigationProps) => {
 			>
 				<div className="flex flex-col gap-12 overflow-auto px-6 py-6">
 					<div className="flex flex-col gap-4">
-						{items?.map((item, index) => {
+						{items?.map((item) => {
 							return (
 								<React.Fragment key={item.title}>
 									<h3
@@ -64,7 +64,7 @@ const MobileNavigation = ({ items, className }: MobileNavigationProps) => {
 										{item.title}
 									</h3>
 									<div className="flex flex-col gap-3">
-										{item.items?.map((subItem, index) => {
+										{item.items?.map((subItem) => {
 											return (
 												<Link
 													key={subItem.title}

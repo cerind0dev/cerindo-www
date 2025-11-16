@@ -4,9 +4,7 @@ import Link from 'next/link'
 import { rubik } from '@/config/font'
 import { cn } from '@/lib/utils'
 
-import { AspectRatio } from '@/components/ui/aspect-ratio'
 import { buttonVariants } from '@/components/ui/button'
-import { Skeleton } from '@/components/ui/skeleton'
 
 export default function BlogNotFound() {
 	return (
