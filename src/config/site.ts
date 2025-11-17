@@ -1,13 +1,13 @@
 import { MainNavigationItem } from '@/types'
 
 export const siteConfig = {
-	name: 'cerindo',
+	name: 'Cerindo',
 	description:
 		'Streamline your global logistics with ease. Experience, efficient and transparent logistics solutions for your business.',
-	url: 'https://by5071.com',
-	ogImage: 'https://by5071.com/opengraph-image.png',
+	url: 'https://www.cerindo.co.id',
+	ogImage: 'https://www.cerindo.co.id/opengraph-image.png',
 	links: {
-		github: 'https://github.com/panduananto/cerindo-www',
+		github: 'https://github.com/cerind0dev/cerindo-www',
 	},
 	mainNav: [
 		{
